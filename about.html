@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Mama Mia Ristorante</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container flex-between">
+            <a href="#" onclick="navigate('home'); return false;">
+                <img src="assets/Mama Mia Ristorante Logo.png" alt="Mama Mia Ristorante" class="logo-img">
+            </a>
+            <nav class="nav-desktop">
+                <a href="#" onclick="navigate('home'); return false;" class="nav-link">Home</a>
+                <a href="#" onclick="navigate('menu'); return false;" class="nav-link">Menu</a>
+                <a href="#" onclick="navigate('reward'); return false;" class="nav-link">Rewards</a>
+                <a href="#" onclick="navigate('about'); return false;" class="nav-link text-brand-red">About Us</a>
+            </nav>
+            <button onclick="navigate('order')" class="cart-btn">
+                <svg class="cart-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
+                <span>Cart (<span id="cart-count">0</span>)</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section id="about" class="page-section bg-brand-light">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 4rem;">
+                    <h2 class="section-title">Our Heritage</h2>
+                    <div class="title-divider"></div>
+                </div>
+                
+                <div class="about-layout">
+                    <div class="about-col">
+                        <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=800&auto=format&fit=crop" class="about-img" alt="Chefs in kitchen">
+                    </div>
+                    <div class="about-col">
+                        <h3 class="about-title">Our Story</h3>
+                        <p class="about-text">
+                            Established in 1982 by brothers Alessandro and Matteo, Mama Mia Ristorante began as a humble trattoria in the heart of Florence. We brought our family's deep-rooted passion for honest, rustic cooking across the world, preserving the exact recipes our grandmother taught us.
+                        </p>
+                        <h3 class="about-title">Our Philosophy</h3>
+                        <p class="about-text" style="margin-bottom: 0;">
+                            We believe that truly exceptional food does not need to be complicated. It relies on the absolute freshness of the ingredients, the mastery of simple techniques, and cooking from the heart. Every dish served is a celebration of Italian culture.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container text-center">
+            <img src="assets/Mama Mia Ristorante Logo.png" alt="Mama Mia Logo" class="footer-logo">
+            <p class="footer-text">&copy; 2026 Mama Mia Ristorante. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Instagram</a>
+                <a href="#" class="footer-link">Facebook</a>
+                <a href="#" class="footer-link">Reservations</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

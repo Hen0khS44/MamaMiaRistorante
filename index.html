@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mama Mia Ristorante</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container flex-between">
+            <a href="#" onclick="navigate('home'); return false;">
+                <img src="assets/Mama Mia Ristorante Logo.png" alt="Mama Mia Ristorante" class="logo-img">
+            </a>
+            <nav class="nav-desktop">
+                <a href="#" onclick="navigate('home'); return false;" class="nav-link text-brand-red">Home</a>
+                <a href="#" onclick="navigate('menu'); return false;" class="nav-link">Menu</a>
+                <a href="#" onclick="navigate('reward'); return false;" class="nav-link">Rewards</a>
+                <a href="#" onclick="navigate('about'); return false;" class="nav-link">About Us</a>
+            </nav>
+            <button onclick="navigate('order')" class="cart-btn">
+                <svg class="cart-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+                <span>Cart (<span id="cart-count">0</span>)</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section id="home" class="hero-section">
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            
+            <div class="hero-content">
+                <span class="hero-subtitle">Est. 1982</span>
+                <h1 class="hero-title">The Taste of <br>Authentic Italy</h1>
+                <p class="hero-desc">Experience our family recipes handed down through generations, crafted with passion and the finest ingredients.</p>
+                <button onclick="navigate('menu')" class="btn-explore">Explore Menu</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container text-center">
+            <img src="assets/Mama Mia Ristorante Logo.png" alt="Mama Mia Logo" class="footer-logo">
+            <p class="footer-text">&copy; 2026 Mama Mia Ristorante. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Instagram</a>
+                <a href="#" class="footer-link">Facebook</a>
+                <a href="#" class="footer-link">Reservations</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

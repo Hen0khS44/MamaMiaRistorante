@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Mama Mia Ristorante</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container flex-between">
+            <a href="#" onclick="navigate('home'); return false;">
+                <img src="assets/Mama Mia Ristorante Logo.png" alt="Mama Mia Ristorante" class="logo-img">
+            </a>
+            <nav class="nav-desktop">
+                <a href="#" onclick="navigate('home'); return false;" class="nav-link">Home</a>
+                <a href="#" onclick="navigate('menu'); return false;" class="nav-link">Menu</a>
+                <a href="#" onclick="navigate('reward'); return false;" class="nav-link">Rewards</a>
+                <a href="#" onclick="navigate('about'); return false;" class="nav-link">About Us</a>
+            </nav>
+            <button class="cart-btn" onclick="navigate('order')">
+                <svg class="cart-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
+                <span>Cart (<span id="cart-count">0</span>)</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section id="order" class="page-section bg-white">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 3rem;">
+                    <h2 class="section-title">Your Order</h2>
+                    <div class="title-divider"></div>
+                </div>
+
+                <div id="form-error" class="alert-error"></div>
+                <div id="form-success" class="alert-success">
+                    <svg class="cart-icon" style="width: 4rem; height: 4rem; margin: 0 auto 1rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    <p class="font-serif" style="font-size: 1.75rem; font-weight: 700; color: #1A1A1A; margin-bottom: 0.5rem;">Order Confirmed!</p>
+                    <p style="color: #4b5563; margin-bottom: 1.5rem;">Thank you. Your order is being processed by our kitchen.</p>
+                    <button onclick="navigate('home')" class="btn-return">Return to Home</button>
+                </div>
+
+                <div id="order-content" class="order-layout">
+                    <div class="order-cart-col">
+                        <div class="cart-summary-box">
+                            <h3 class="cart-title">Cart Summary</h3>
+                            <div id="cart-items-container" class="cart-items-container"></div>
+                            <div class="cart-total-row">
+                                <span>Total:</span><span>$ <span id="cart-total">0</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="order-form-col">
+                        <form id="checkout-form" class="checkout-box">
+                            <h3 class="cart-title">Checkout Details</h3>
+                            <div class="service-box">
+                                <p class="form-label">Service Option</p>
+                                <div class="radio-group">
+                                    <label class="radio-label"><input type="radio" name="service" value="dinein" class="radio-input"> Dine-in</label>
+                                    <label class="radio-label"><input type="radio" name="service" value="takeaway" class="radio-input"> Take-away</label>
+                                </div>
+                            </div>
+                            <div class="form-grid">
+                                <div class="form-group"><label class="form-label">Full Name</label><input type="text" id="order-name" class="form-input"></div>
+                                <div class="form-group"><label class="form-label">Phone</label><input type="text" id="order-phone" class="form-input"></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Payment</label>
+                                <select id="order-payment" class="form-input">
+                                    <option value="" disabled selected>-- Select Payment --</option>
+                                    <option value="cash">Cash</option>
+                                    <option value="card">Card</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn-submit">PLACE ORDER</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container text-center">
+            <img src="assets/Mama Mia Ristorante Logo.png" alt="Mama Mia Logo" class="footer-logo">
+            <p class="footer-text">&copy; 2026 Mama Mia Ristorante. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Instagram</a>
+                <a href="#" class="footer-link">Facebook</a>
+                <a href="#" class="footer-link">Reservations</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

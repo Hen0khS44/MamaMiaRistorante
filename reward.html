@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rewards - Mama Mia Ristorante</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container flex-between">
+            <a href="#" onclick="navigate('home'); return false;">
+                <img src="assets/Mama Mia Ristorante Logo.png" alt="Mama Mia Ristorante" class="logo-img">
+            </a>
+            <nav class="nav-desktop">
+                <a href="#" onclick="navigate('home'); return false;" class="nav-link">Home</a>
+                <a href="#" onclick="navigate('menu'); return false;" class="nav-link">Menu</a>
+                <a href="#" onclick="navigate('reward'); return false;" class="nav-link text-brand-red">Rewards</a>
+                <a href="#" onclick="navigate('about'); return false;" class="nav-link">About Us</a>
+            </nav>
+            <button onclick="navigate('order')" class="cart-btn">
+                <svg class="cart-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
+                <span>Cart (<span id="cart-count">0</span>)</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section id="reward" class="page-section bg-dark-section">
+            <div class="container">
+                
+                <div class="reward-layout">
+                    <div class="reward-col">
+                        <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=800&auto=format&fit=crop" class="reward-img" alt="Private Dining">
+                    </div>
+                    <div class="reward-col">
+                        <span class="reward-tag">Exclusive Access</span>
+                        <h2 class="reward-title">La Famiglia Society</h2>
+                        <p style="color: #d1d5db; margin-bottom: 1.5rem; line-height: 1.625;">
+                            Join our inner circle. As a member of La Famiglia, you are not just a guest; you are family. Enjoy unprecedented access to our culinary world.
+                        </p>
+                        <ul class="reward-list">
+                            <li>
+                                <svg class="reward-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                Priority Chef's Table Reservations
+                            </li>
+                            <li>
+                                <svg class="reward-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                Complimentary Private Room Access
+                            </li>
+                            <li>
+                                <svg class="reward-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                Invitations to Curated Wine Pairings
+                            </li>
+                        </ul>
+                        <div class="reward-form">
+                            <input type="email" placeholder="Enter your email address" class="reward-input">
+                            <button class="btn-join">Join Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tiers-section">
+                    <div class="text-center" style="margin-bottom: 3rem;">
+                        <span class="reward-tag">Point System</span>
+                        <h3 class="reward-title">Unlock Culinary Experiences</h3>
+                        <div class="title-divider"></div>
+                        <p style="color: #d1d5db; margin-top: 1.5rem;">Earn points with every visit and redeem them for our signature offerings, starting from sweet treats to our most luxurious main courses.</p>
+                    </div>
+
+                    <div class="tiers-grid">
+                        <div class="tier-card">
+                            <div class="tier-header">
+                                <span class="tier-badge">100 Pts</span>
+                                <svg class="reward-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
+                            </div>
+                            <h4 class="tier-title-text">Classic Tiramisu</h4>
+                            <p class="tier-desc">A sweet ending. Claim our signature espresso-soaked dessert.</p>
+                        </div>
+
+                        <div class="tier-card">
+                            <div class="tier-header">
+                                <span class="tier-badge">200 Pts</span>
+                                <svg class="reward-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z" /></svg>
+                            </div>
+                            <h4 class="tier-title-text">Italian Spritz</h4>
+                            <p class="tier-desc">Refresh your palate with our classic sparkling Campari beverage.</p>
+                        </div>
+
+                        <div class="tier-card">
+                            <div class="tier-header">
+                                <span class="tier-badge">400 Pts</span>
+                                <svg class="reward-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                            </div>
+                            <h4 class="tier-title-text">Crudo di Gambero</h4>
+                            <p class="tier-desc">A delicate appetizer of red prawns and cold-pressed olive oil.</p>
+                        </div>
+
+                        <div class="tier-card">
+                            <div class="tier-header">
+                                <span class="tier-badge">600 Pts</span>
+                                <svg class="reward-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            </div>
+                            <h4 class="tier-title-text">Branzino al Sale</h4>
+                            <p class="tier-desc">Enjoy our expertly salt-baked sea bass as your complimentary main.</p>
+                        </div>
+
+                        <div class="tier-card">
+                            <div class="tier-header">
+                                <span class="tier-badge">800 Pts</span>
+                                <svg class="reward-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" /></svg>
+                            </div>
+                            <h4 class="tier-title-text">Truffle Risotto</h4>
+                            <p class="tier-desc">Indulge in our luxurious Acquerello rice with shaved black truffle.</p>
+                        </div>
+
+                        <div class="tier-card tier-card-premium">
+                            <div class="premium-glow"></div>
+                            <div class="tier-header">
+                                <span class="tier-badge tier-badge-premium">1000 Pts</span>
+                                <svg class="reward-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" /></svg>
+                            </div>
+                            <h4 class="tier-title-text">Bistecca Fiorentina</h4>
+                            <p class="tier-desc">The ultimate reward. A complimentary Dry-aged Wagyu t-bone steak.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container text-center">
+            <img src="assets/Mama Mia Ristorante Logo.png" alt="Mama Mia Logo" class="footer-logo">
+            <p class="footer-text">&copy; 2026 Mama Mia Ristorante. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Instagram</a>
+                <a href="#" class="footer-link">Facebook</a>
+                <a href="#" class="footer-link">Reservations</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

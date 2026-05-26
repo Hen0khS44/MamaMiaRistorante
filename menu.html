@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Mama Mia Ristorante</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container flex-between">
+            <a href="#" onclick="navigate('home'); return false;">
+                <img src="assets/Mama Mia Ristorante Logo.png" alt="Mama Mia Ristorante" class="logo-img">
+            </a>
+            <nav class="nav-desktop">
+                <a href="#" onclick="navigate('home'); return false;" class="nav-link">Home</a>
+                <a href="#" onclick="navigate('menu'); return false;" class="nav-link text-brand-red">Menu</a>
+                <a href="#" onclick="navigate('reward'); return false;" class="nav-link">Rewards</a>
+                <a href="#" onclick="navigate('about'); return false;" class="nav-link">About Us</a>
+            </nav>
+            <button onclick="navigate('order')" class="cart-btn">
+                <svg class="cart-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
+                <span>Cart (<span id="cart-count">0</span>)</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section id="menu" class="page-section bg-white">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 4rem;">
+                    <h2 class="section-title">Our Culinary Offering</h2>
+                    <div class="title-divider"></div>
+                </div>
+                
+                <div class="menu-layout">
+                    
+                    <div>
+                        <div class="category-header">
+                            <span>Main Courses</span>
+                            <div class="category-line"></div>
+                        </div>
+                        
+                        <div class="menu-group">
+                            <!-- Main 1 -->
+                            <div class="menu-item">
+                                <img src="assets/Cajun_Shrimp.jpeg" class="menu-item-img" alt="Cajun Shrimp">
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h4 class="item-name">Cajun Shrimp</h4>
+                                        <span class="item-price">$<span class="item-price-val">35</span></span>
+                                    </div>
+                                    <p class="item-desc">Shrimp, Garlic Cream Sauce, Fettuccine</p>
+                                    <div class="qty-wrapper">
+                                        <button class="qty-btn dec-btn">-</button>
+                                        <span class="item-qty">0</span>
+                                        <button class="qty-btn inc-btn">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Main 2 -->
+                            <div class="menu-item">
+                                <img src="assets/Truffle Rissoto.jpeg" class="menu-item-img" alt="Truffle Risotto">
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h4 class="item-name">Truffle Risotto</h4>
+                                        <span class="item-price">$<span class="item-price-val">45</span></span>
+                                    </div>
+                                    <p class="item-desc">Acquerello rice, shaved black truffle, parmesan.</p>
+                                    <div class="qty-wrapper">
+                                        <button class="qty-btn dec-btn">-</button>
+                                        <span class="item-qty">0</span>
+                                        <button class="qty-btn inc-btn">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Main 3 -->
+                            <div class="menu-item">
+                                <img src="assets/Fiorentina_Steak.jpeg" class="menu-item-img" alt="Bistecca Fiorentina">
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h4 class="item-name">Bistecca Fiorentina</h4>
+                                        <span class="item-price">$<span class="item-price-val">120</span></span>
+                                    </div>
+                                    <p class="item-desc">Dry-aged Wagyu t-bone, roasted rosemary potatoes.</p>
+                                    <div class="qty-wrapper">
+                                        <button class="qty-btn dec-btn">-</button>
+                                        <span class="item-qty">0</span>
+                                        <button class="qty-btn inc-btn">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Main 4 -->
+                            <div class="menu-item">
+                                <img src="assets/Branzino.webp" class="menu-item-img" alt="Branzino al Sale">
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h4 class="item-name">Branzino al Sale</h4>
+                                        <span class="item-price">$<span class="item-price-val">40</span></span>
+                                    </div>
+                                    <p class="item-desc">Salt-baked sea bass, charred lemon, herbs.</p>
+                                    <div class="qty-wrapper">
+                                        <button class="qty-btn dec-btn">-</button>
+                                        <span class="item-qty">0</span>
+                                        <button class="qty-btn inc-btn">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Main 5 -->
+                            <div class="menu-item">
+                                <img src="assets/Osso Buco.jpeg" class="menu-item-img" alt="Osso Buco">
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h4 class="item-name">Osso Buco</h4>
+                                        <span class="item-price">$<span class="item-price-val">60</span></span>
+                                    </div>
+                                    <p class="item-desc">Braised veal shank, saffron risotto, gremolata.</p>
+                                    <div class="qty-wrapper">
+                                        <button class="qty-btn dec-btn">-</button>
+                                        <span class="item-qty">0</span>
+                                        <button class="qty-btn inc-btn">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Main 6 -->
+                            <div class="menu-item">
+                                <img src="assets/Nerro di seppia.jpeg" class="menu-item-img" alt="Nero di Seppia">
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h4 class="item-name">Nero di Seppia</h4>
+                                        <span class="item-price">$<span class="item-price-val">35</span></span>
+                                    </div>
+                                    <p class="item-desc">Shrimp, Squid ink pasta, calamari, white wine, garlic.</p>
+                                    <div class="qty-wrapper">
+                                        <button class="qty-btn dec-btn">-</button>
+                                        <span class="item-qty">0</span>
+                                        <button class="qty-btn inc-btn">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Main 7 -->
+                            <div class="menu-item">
+                                <img src="assets/Ravioli.jpeg" class="menu-item-img" alt="Ravioli al Tartufo">
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h4 class="item-name">Ravioli al Tartufo</h4>
+                                        <span class="item-price">$<span class="item-price-val">38</span></span>
+                                    </div>
+                                    <p class="item-desc">Handmade ravioli, ricotta, black truffle cream sauce.</p>
+                                    <div class="qty-wrapper">
+                                        <button class="qty-btn dec-btn">-</button>
+                                        <span class="item-qty">0</span>
+                                        <button class="qty-btn inc-btn">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Main 8 -->
+                            <div class="menu-item">
+                                <img src="assets/Cotoletta.jpeg" class="menu-item-img" alt="Cotoletta Milanese">
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h4 class="item-name">Cotoletta Milanese</h4>
+                                        <span class="item-price">$<span class="item-price-val">25</span></span>
+                                    </div>
+                                    <p class="item-desc">Breaded bone-in veal cutlet, fries, arugula, lemon slice.</p>
+                                    <div class="qty-wrapper">
+                                        <button class="qty-btn dec-btn">-</button>
+                                        <span class="item-qty">0</span>
+                                        <button class="qty-btn inc-btn">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Main 9 -->
+                            <div class="menu-item">
+                                <img src="assets/Aglio e Olio.jpeg" class="menu-item-img" alt="Aglio e Olio">
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h4 class="item-name">Aglio e Olio</h4>
+                                        <span class="item-price">$<span class="item-price-val">40</span></span>
+                                    </div>
+                                    <p class="item-desc">Spaghetti, garlic, olive oil, chili flakes, parsley.</p>
+                                    <div class="qty-wrapper">
+                                        <button class="qty-btn dec-btn">-</button>
+                                        <span class="item-qty">0</span>
+                                        <button class="qty-btn inc-btn">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Main 10 -->
+                            <div class="menu-item">
+                                <img src="assets/Lasagna.jpeg" class="menu-item-img" alt="Lasagna">
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h4 class="item-name">Lasagna</h4>
+                                        <span class="item-price">$<span class="item-price-val">35</span></span>
+                                    </div>
+                                    <p class="item-desc">Pasta, beef ragù, béchamel sauce, mozzarella, parmesan.</p>
+                                    <div class="qty-wrapper">
+                                        <button class="qty-btn dec-btn">-</button>
+                                        <span class="item-qty">0</span>
+                                        <button class="qty-btn inc-btn">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Main 11 -->
+                            <div class="menu-item">
+                                <img src="assets/Magherita Pizza.jpeg" class="menu-item-img" alt="Margherita Pizza">
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h4 class="item-name">Margherita Pizza</h4>
+                                        <span class="item-price">$<span class="item-price-val">30</span></span>
+                                    </div>
+                                    <p class="item-desc">Pasta, beef ragù, béchamel sauce, mozzarella, parmesan.</p>
+                                    <div class="qty-wrapper">
+                                        <button class="qty-btn dec-btn">-</button>
+                                        <span class="item-qty">0</span>
+                                        <button class="qty-btn inc-btn">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Main 12 -->
+                            <div class="menu-item">
+                                <img src="assets/Burrata Caprese Salad.jpeg" class="menu-item-img" alt="Burrata Caprese Salad">
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h4 class="item-name">Burrata Caprese Salad</h4>
+                                        <span class="item-price">$<span class="item-price-val">35</span></span>
+                                    </div>
+                                    <p class="item-desc">Burrata cheese, tomatoes, basil, olive oil, balsamic glaze.</p>
+                                    <div class="qty-wrapper">
+                                        <button class="qty-btn dec-btn">-</button>
+                                        <span class="item-qty">0</span>
+                                        <button class="qty-btn inc-btn">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="category-header">
+                            <span>Desserts</span>
+                            <div class="category-line"></div>
+                        </div>
+                        
+                        <div class="menu-group" style="margin-bottom: 3rem;">
+                            <div class="menu-item">
+                                <img src="assets/Tiramisu.jpeg" class="menu-item-img" alt="Classic Tiramisu">
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h4 class="item-name">Classic Tiramisu</h4>
+                                        <span class="item-price">$<span class="item-price-val">20</span></span>
+                                    </div>
+                                    <p class="item-desc">Espresso-soaked ladyfingers, mascarpone cream.</p>
+                                    <div class="qty-wrapper">
+                                        <button class="qty-btn dec-btn">-</button>
+                                        <span class="item-qty">0</span>
+                                        <button class="qty-btn inc-btn">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <img src="assets/PannaCotta.jpeg" class="menu-item-img" alt="Vanilla Panna Cotta">
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h4 class="item-name">Vanilla Panna Cotta</h4>
+                                        <span class="item-price">$<span class="item-price-val">16</span></span>
+                                    </div>
+                                    <p class="item-desc">Madagascar vanilla, wild berry compote.</p>
+                                    <div class="qty-wrapper">
+                                        <button class="qty-btn dec-btn">-</button>
+                                        <span class="item-qty">0</span>
+                                        <button class="qty-btn inc-btn">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <img src="assets/Cannoli siciliani.jpeg" class="menu-item-img" alt="Cannoli Siciliani">
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h4 class="item-name">Cannoli Siciliani</h4>
+                                        <span class="item-price">$<span class="item-price-val">5</span></span>
+                                    </div>
+                                    <p class="item-desc">Crispy pastry shells, sweet ricotta, chocolate chips.</p>
+                                    <div class="qty-wrapper">
+                                        <button class="qty-btn dec-btn">-</button>
+                                        <span class="item-qty">0</span>
+                                        <button class="qty-btn inc-btn">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <img src="assets/Gelato.jpeg" class="menu-item-img" alt="Gelato Artigianale">
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h4 class="item-name">Gelato Artigianale</h4>
+                                        <span class="item-price">$<span class="item-price-val">8</span></span>
+                                    </div>
+                                    <p class="item-desc">Trio of house-made gelato: pistachio, vanilla, chocolate.</p>
+                                    <div class="qty-wrapper">
+                                        <button class="qty-btn dec-btn">-</button>
+                                        <span class="item-qty">0</span>
+                                        <button class="qty-btn inc-btn">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <img src="assets/affogato al caffe.webp" class="menu-item-img" alt="Affogato al Caffè">
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h4 class="item-name">Affogato al Caffè</h4>
+                                        <span class="item-price">$<span class="item-price-val">7</span></span>
+                                    </div>
+                                    <p class="item-desc">Vanilla bean gelato drowned in hot espresso.</p>
+                                    <div class="qty-wrapper">
+                                        <button class="qty-btn dec-btn">-</button>
+                                        <span class="item-qty">0</span>
+                                        <button class="qty-btn inc-btn">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <img src="assets/tortino al cioccolato.jpeg" class="menu-item-img" alt="Tortino al Cioccolato">
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h4 class="item-name">Tortino al Cioccolato</h4>
+                                        <span class="item-price">$<span class="item-price-val">10</span></span>
+                                    </div>
+                                    <p class="item-desc">Warm molten chocolate cake, raspberry coulis.</p>
+                                    <div class="qty-wrapper">
+                                        <button class="qty-btn dec-btn">-</button>
+                                        <span class="item-qty">0</span>
+                                        <button class="qty-btn inc-btn">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category-header">
+                            <span>Beverages</span>
+                            <div class="category-line"></div>
+                        </div>
+                        
+                        <div class="menu-group">
+                            <div class="menu-item">
+                                <img src="assets/italian sprizt.jpeg" class="menu-item-img" alt="Italian Spritz">
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h4 class="item-name">Italian Spritz</h4>
+                                        <span class="item-price">$<span class="item-price-val">8</span></span>
+                                    </div>
+                                    <p class="item-desc">Campari, prosecco, sparkling water, orange.</p>
+                                    <div class="qty-wrapper">
+                                        <button class="qty-btn dec-btn">-</button>
+                                        <span class="item-qty">0</span>
+                                        <button class="qty-btn inc-btn">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <img src="assets/Barolo.jpeg" class="menu-item-img" alt="House Red Wine">
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h4 class="item-name">House Red Wine</h4>
+                                        <span class="item-price">$<span class="item-price-val">50</span></span>
+                                    </div>
+                                    <p class="item-desc">Glass of Barolo DOCG.</p>
+                                    <div class="qty-wrapper">
+                                        <button class="qty-btn dec-btn">-</button>
+                                        <span class="item-qty">0</span>
+                                        <button class="qty-btn inc-btn">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <img src="assets/Negroni.jpeg" class="menu-item-img" alt="Negroni Sbagliato">
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h4 class="item-name">Negroni Sbagliato</h4>
+                                        <span class="item-price">$<span class="item-price-val">8</span></span>
+                                    </div>
+                                    <p class="item-desc">Campari, sweet vermouth, prosecco.</p>
+                                    <div class="qty-wrapper">
+                                        <button class="qty-btn dec-btn">-</button>
+                                        <span class="item-qty">0</span>
+                                        <button class="qty-btn inc-btn">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <img src="assets/Lemon.jpeg" class="menu-item-img" alt="Limoncello">
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h4 class="item-name">Limoncello</h4>
+                                        <span class="item-price">$<span class="item-price-val">5</span></span>
+                                    </div>
+                                    <p class="item-desc">Traditional Amalfi coast lemon liqueur.</p>
+                                    <div class="qty-wrapper">
+                                        <button class="qty-btn dec-btn">-</button>
+                                        <span class="item-qty">0</span>
+                                        <button class="qty-btn inc-btn">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <img src="assets/espresso machiatto.jpeg" class="menu-item-img" alt="Espresso Macchiato">
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h4 class="item-name">Espresso Macchiato</h4>
+                                        <span class="item-price">$<span class="item-price-val">4</span></span>
+                                    </div>
+                                    <p class="item-desc">Single shot espresso with a dash of steamed milk.</p>
+                                    <div class="qty-wrapper">
+                                        <button class="qty-btn dec-btn">-</button>
+                                        <span class="item-qty">0</span>
+                                        <button class="qty-btn inc-btn">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <img src="assets/acqua panna.jpeg" class="menu-item-img" alt="Acqua Panna">
+                                <div class="menu-item-content">
+                                    <div class="menu-item-header">
+                                        <h4 class="item-name">Acqua Panna</h4>
+                                        <span class="item-price">$<span class="item-price-val">3</span></span>
+                                    </div>
+                                    <p class="item-desc">Natural still mineral water from Tuscany.</p>
+                                    <div class="qty-wrapper">
+                                        <button class="qty-btn dec-btn">-</button>
+                                        <span class="item-qty">0</span>
+                                        <button class="qty-btn inc-btn">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container text-center">
+            <img src="assets/Mama Mia Ristorante Logo.png" alt="Mama Mia Logo" class="footer-logo">
+            <p class="footer-text">&copy; 2026 Mama Mia Ristorante. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Instagram</a>
+                <a href="#" class="footer-link">Facebook</a>
+                <a href="#" class="footer-link">Reservations</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
