@@ -1,5 +1,5 @@
-Hi Everyone, i'm currently in the first year of Computer Science and this is my first ever project. 
-Before jumping into the code structure.. I wanna give you a background about this.
+Hi Everyone, when I made this project, I was in the first year of Computer Science and this is my first ever project. 
+Before jumping into the web explanation.. I wanna give you a background about this.
 This project was actually an Assignment for Human and Computer Interaction's Course from my Campus. 
 I'm gonna admit that most of the Code are made by AI, and i'm just reviewing stuff (Prompting the UI based on my imagination, 
 like how I wanted the Restaurant website to be). Basically Vibe Coding.
